@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:instagram_bottom_nav_bar/instagram_tab_view.dart';
+
+import '../../../core/base/model/people_model.dart';
 import '../../../core/base/view/base_view.dart';
-import '../../../core/consts/colors/colors.dart';
-import '../../../core/consts/icon/icon_constants.dart';
-import '../../../mock/peoples.dart';
+import '../../../core/constants/colors/colors.dart';
+import '../../../core/constants/icon/icon_constants.dart';
 import '../../people/view/people_view.dart';
 import '../../profile/view/profile_view.dart';
 import '../viewModel/bottom_nav_bar_view_model.dart';
@@ -64,7 +65,16 @@ class BottomNavBarView extends StatelessWidget {
       ),
       InstagramTabItem(
         label: 'Profile',
-        page: ProfileView(person: MockPeople.peoples.first),
+        page: ProfileView(
+          person: PeopleModel(
+            id: 999,
+            firstName: 'Terry',
+            language: 'Turkish',
+            nation: 'German',
+            userName: 'tyre',
+            image: 'https://robohash.org/perferendisideveniet.png',
+          ),
+        ),
         icon: IconConstants.tabBar5,
       ),
     ];

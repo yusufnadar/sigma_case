@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
-import '../../../core/consts/colors/colors.dart';
-import '../../../core/consts/icon/icon_constants.dart';
-import '../../../core/consts/textStyles/styles.dart';
+
+import '../../../core/constants/colors/colors.dart';
+import '../../../core/constants/icon/icon_constants.dart';
+import '../../../core/constants/textStyles/styles.dart';
 import '../../searchPeople/view/search_people_view.dart';
 import '../../searchPeople/viewModel/search_people_view_model.dart';
 
@@ -34,7 +35,7 @@ class PeopleAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: GestureDetector(
         onTap: () {
           Provider.of<SearchPeopleViewModel>(context,listen: false).userController.clear();
-          Navigator.of(context, rootNavigator: true).push(
+          Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => const SearchPeopleView(),
             ),

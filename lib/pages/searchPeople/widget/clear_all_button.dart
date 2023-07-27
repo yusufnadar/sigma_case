@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import '../../../core/consts/colors/colors.dart';
-import '../../../core/consts/textStyles/styles.dart';
+
+import '../../../core/constants/colors/colors.dart';
+import '../../../core/constants/textStyles/styles.dart';
 import '../viewModel/search_people_view_model.dart';
 
 class ClearAllButton extends StatelessWidget {

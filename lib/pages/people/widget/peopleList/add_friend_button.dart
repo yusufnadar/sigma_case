@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/consts/colors/colors.dart';
-import '../../../../core/consts/textStyles/styles.dart';
+
+import '../../../../core/constants/colors/colors.dart';
+import '../../../../core/constants/textStyles/styles.dart';
 
 class AddFriendButton extends StatelessWidget {
   const AddFriendButton({Key? key}) : super(key: key);
@@ -9,11 +10,11 @@ class AddFriendButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 30.h,
       alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(vertical: 4.h),
       decoration: BoxDecoration(
         color: ColorConstants.blue,
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(6.r),
       ),
       child: Text(
         'Add Friend',

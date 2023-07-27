@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../viewModel/search_people_view_model.dart';
 import '../widget/appBar/search_people_app_bar.dart';
 import '../widget/search_people_list.dart';

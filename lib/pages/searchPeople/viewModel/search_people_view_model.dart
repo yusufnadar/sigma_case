@@ -1,10 +1,13 @@
 import 'package:async/async.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../common/viewModels/people_view_model.dart';
 import '../../../core/base/model/people_model.dart';
-import '../../../mock/peoples.dart';
+import '../../../core/base/viewModel/base_view_model.dart';
+import '../../../core/service/navigation/navigation_service.dart';
 
-class SearchPeopleViewModel extends ChangeNotifier {
+class SearchPeopleViewModel extends ChangeNotifier with BaseViewModel {
   late CancelableOperation<void> cancellableOperation;
   final _delayTime = const Duration(milliseconds: 300);
 
@@ -24,7 +27,7 @@ class SearchPeopleViewModel extends ChangeNotifier {
   }
 
   void onItemChanged(String value) {
-    if(value == ''){
+    if (value == '') {
       userController.clear();
     }
     cancellableOperation.cancel();
@@ -39,8 +42,12 @@ class SearchPeopleViewModel extends ChangeNotifier {
       peoples.clear();
     } else {
       final lowercaseValue = value.toLowerCase();
-      peoples = MockPeople.peoples
-          .where((item) => item.name!.toLowerCase().startsWith(lowercaseValue))
+      final peopleViewModel = Provider.of<PeopleViewModel>(
+        NavigationService.instance.navigatorKey.currentState!.context,listen: false
+      );
+      peoples = peopleViewModel.people
+          .where((item) =>
+              item.firstName!.toLowerCase().startsWith(lowercaseValue))
           .toList();
     }
     notifyListeners();

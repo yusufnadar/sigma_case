@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/consts/colors/colors.dart';
-import '../../../core/consts/image/image_constants.dart';
-import '../../../core/consts/textStyles/styles.dart';
+import '../../../core/constants/colors/colors.dart';
+import '../../../core/constants/image/image_constants.dart';
+import '../../../core/constants/textStyles/styles.dart';
 
 class SearchImage extends StatelessWidget {
   const SearchImage({Key? key}) : super(key: key);

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+
 import '../../../core/base/model/people_model.dart';
-import '../../../core/consts/colors/colors.dart';
-import '../../../core/consts/textStyles/styles.dart';
+import '../../../core/constants/colors/colors.dart';
+import '../../../core/constants/textStyles/styles.dart';
 import '../../profile/view/profile_view.dart';
 import '../viewModel/search_people_view_model.dart';
 import 'clear_all_button.dart';
@@ -102,7 +103,7 @@ class SearchPeopleList extends StatelessWidget {
     return Row(
       children: [
         Text(
-          '${person.name}',
+          '${person.firstName}',
           style: TextStyleConstants.regularStyle(
             fontSize: 16,
           ),

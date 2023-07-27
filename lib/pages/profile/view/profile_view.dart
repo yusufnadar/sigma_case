@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../core/base/model/people_model.dart';
-import '../../../core/consts/colors/colors.dart';
-import '../../../core/consts/textStyles/styles.dart';
+import '../../../core/constants/colors/colors.dart';
+import '../../../core/constants/textStyles/styles.dart';
 import '../widget/edit_profile_button.dart';
 
 class ProfileView extends StatelessWidget {
@@ -14,7 +15,7 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(person.name!),
+        title: Text(person.firstName!),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
@@ -40,7 +41,7 @@ class ProfileView extends StatelessWidget {
 
   Text buildAboutText() {
     return Text(
-      'My name is ${person.name} and ı am 24 years old. I like coffee and playing tennis.',
+      'My name is ${person.firstName} and ı am 24 years old. I like coffee and playing tennis.',
     );
   }
 
@@ -66,7 +67,7 @@ class ProfileView extends StatelessWidget {
 
   Text buildName() {
     return Text(
-      '${person.name}',
+      '${person.firstName}',
       style: TextStyleConstants.mediumStyle(
         fontSize: 30,
       ),

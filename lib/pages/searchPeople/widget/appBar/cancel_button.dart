@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/consts/colors/colors.dart';
-import '../../../../core/consts/textStyles/styles.dart';
+import '../../../../core/constants/colors/colors.dart';
+import '../../../../core/constants/textStyles/styles.dart';
 
 class CancelButton extends StatelessWidget {
   const CancelButton({Key? key}) : super(key: key);

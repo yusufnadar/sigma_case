@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../core/consts/colors/colors.dart';
-import '../../../../core/consts/icon/icon_constants.dart';
-import '../../../../core/consts/textStyles/styles.dart';
+import '../../../../core/constants/colors/colors.dart';
+import '../../../../core/constants/icon/icon_constants.dart';
+import '../../../../core/constants/textStyles/styles.dart';
 import '../../viewModel/search_people_view_model.dart';
 
 class SearchInput extends StatelessWidget {
@@ -29,7 +29,7 @@ class SearchInput extends StatelessWidget {
             minWidth: 34.w,
             maxWidth: 34.w,
           ),
-          suffixIcon: GestureDetector(
+          suffixIcon: model.userController.text != ''  ? GestureDetector(
             onTap: ()=>model.onItemChanged(''),
             child: Padding(
               padding: EdgeInsets.only(right: 14.w),
@@ -37,7 +37,7 @@ class SearchInput extends StatelessWidget {
                 IconConstants.close,
               ),
             ),
-          ),
+          ) : null,
           prefixIcon: Padding(
             padding: EdgeInsets.only(left: 12.w, right: 9.w),
             child: SvgPicture.asset(

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../core/consts/colors/colors.dart';
-import '../../../../core/consts/icon/icon_constants.dart';
-import '../../../../core/consts/textStyles/styles.dart';
+
+import '../../../../core/constants/colors/colors.dart';
+import '../../../../core/constants/icon/icon_constants.dart';
+import '../../../../core/constants/textStyles/styles.dart';
 
 class CustomChip extends StatelessWidget {
   final String? title;

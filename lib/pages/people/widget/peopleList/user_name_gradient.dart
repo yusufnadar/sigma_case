@@ -11,7 +11,7 @@ class UserNameGradient extends StatelessWidget {
       right: 0,
       left: 0,
       child: Container(
-        height: 41.h,
+        height: 61.h,
         decoration: BoxDecoration(
           color: Colors.white,
           gradient: LinearGradient(
